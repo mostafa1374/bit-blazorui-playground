@@ -24,3 +24,32 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
+
+::deep .custom-class {
+    border: 1px solid red;
+    box-shadow: aqua 0 0 1rem;
+}
+
+::deep .custom-input {
+    color: darkgreen;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 1rem;
+    height: 3rem;
+}
+
+::deep .custom-field {
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    background-color: tomato;
+}
+
+::deep .custom-focus .custom-field::after {
+    border-radius: 1rem;
+    border-width: 0.25rem;
+    border-color: rebeccapurple;
+}
+
+::deep .custom-focus .custom-label {
+    color: chartreuse;
+}

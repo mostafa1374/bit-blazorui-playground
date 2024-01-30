@@ -16,6 +16,13 @@
         </div>
     </div>
 
+    <BitTextField Label="Custom label class"
+              DefaultValue="Custom input class"
+              Classes="@(new() { FieldGroup = "custom-field",
+                                 Focused = "custom-focus",
+                                 Input = "custom-input",
+                                 Label = "custom-label" })" />
+
     <div class="section @BitCss.Class.Color.Border.Disabled">
         <BitTypography Variant="BitTypographyVariant.H3" Gutter>
             Counter
@@ -23,8 +30,8 @@
         <BitButton OnClick="() => _counter = 0" ButtonStyle="BitButtonStyle.Standard">Reset</BitButton>
         <BitButton OnClick="() => _counter++">Increase [@_counter]</BitButton>
     </div>
- </div>
+</div>
 
- @code {
+@code {
     int _counter;
 }
